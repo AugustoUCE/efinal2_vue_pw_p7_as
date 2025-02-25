@@ -1,26 +1,57 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+<div>
+  
+  <IngresarProducto/>
+  <Venta />
+  <Detalle />
+</div>
+<div>
+
+  <RealizarVenta/>
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+import IngresarProducto from '@/pages/IngresarProducto.vue'
+import RealizarVenta from '@/pages/RealizarVenta.vue'
+import Venta from '@/components/Venta.vue'
+import Detalle from '@/components/Detalle.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    
+  IngresarProducto,
+  RealizarVenta,
+ 
+  
+    
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.container,.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100vh;
+    background-color: aquamarine;
 }
+@media (max-width: 768px) {
+  .container,.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100vh;
+    background-color: aquamarine;
+}
+}
+
+
 </style>
